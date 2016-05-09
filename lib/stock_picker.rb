@@ -1,3 +1,8 @@
 def stock_picker(prices)
-	1
+	
+low_price = prices.find_index(prices.min)
+high_price = prices.find_index(prices.max)
+
+selection = [low_price, high_price]
+selection
 end

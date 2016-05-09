@@ -13,20 +13,20 @@ My own addition:
 describe "stock_picker"   do
 	context "Minimum price is before the maximum price" do
 		it "Returns the index of the min day and index of the max day" do
-			expects(stock_picker([1,20,5,2,3,4,7])).to eql([0,1])
+			expect(stock_picker([1,20,5,2,3,4,7])).to eql([0,1])
 		end
 	end
 
 	context "Minimum comes after the maximum price" do
 		it "Returns the index of the min day, 
 			and the index of the next max day" do
-			expects(stock_picker([20,1,5,2,3,4,7])).to eql([1,6])
+			expect(stock_picker([20,1,5,2,3,4,7])).to eql([1,6])
 		end
 	end
 
 	context "The minimum price falls on the last day" do
 		it "Chooses the min before the last day, and the max after that min" do
-			expects(stock_picker([20,5,2,3,4,7,1])).to eql([2,5])
+			expect(stock_picker([20,5,2,3,4,7,1])).to eql([2,5])
 		end
 	end
 
